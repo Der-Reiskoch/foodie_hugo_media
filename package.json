@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "hugo server -p 9999",
+    "start": "hugo server -p 9999"
   },
   "repository": {
     "type": "git",
