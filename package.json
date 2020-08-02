@@ -1,0 +1,20 @@
+{
+  "name": "foodie_hugo_media_server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "hugo server -p 9999",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/foodieyamwoonsen/foodie_hugo_media.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media/issues"
+  },
+  "homepage": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media#readme",
+}
