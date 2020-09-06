@@ -5,13 +5,11 @@ publishdir    = "public"
 title = "foodie media server"
 canonifyurls  = true
 
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "ja"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
 
 [Params]
   subtitle = ""
@@ -19,7 +17,7 @@ pygmentCodeFences = true
   favicon = "img/favicon.ico"
   dateformat = "02.01.2006" # Change the format of dates
   commit = false
-  rss = true
+  rss = false
   comments = true
 
 
