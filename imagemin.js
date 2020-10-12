@@ -6,8 +6,8 @@ const plugins = [
   ['imagemin-gifsicle', {
     interlaced: true,
   }],
-  ['imagemin-jpegtran', {
-    progressive: true,
+  ['imagemin-jpegoptim', {
+    size: '50%',
   }],
   ['imagemin-optipng', {
     optimizationLevel: 5,
