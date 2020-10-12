@@ -11,11 +11,18 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/foodieyamwoonsen/foodie_hugo_media.git"
   },
+  "lint-staged": {
+    "*.{png,jpeg,jpg,gif}": ["imagemin-lint-staged", "git add"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media/issues"
   },
-  "homepage": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media#readme"
+  "homepage": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media#readme",
+  "devDependencies": {
+    "imagemin-lint-staged": "^0.4.0",
+    "lint-staged": "^10.4.0"
+  }
 }
