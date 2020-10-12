@@ -26,8 +26,8 @@ const minifyFile = filename =>
   .then(originalBuffer => imagemin
     .buffer(originalBuffer, { plugins })
     .then(minimizedBuffer => ({
-      // minimized: minimizedBuffer !== originalBuffer,
-      // originalSize: originalBuffer.length,
+      minimized: minimizedBuffer !== originalBuffer,
+      originalSize: originalBuffer.length,
       minimizedBuffer,
     }))
   ).then(({ minimizedBuffer }) => new Promise((resolve, reject) =>
