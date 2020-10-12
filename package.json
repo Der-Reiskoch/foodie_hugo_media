@@ -12,8 +12,9 @@
     "url": "git+ssh://git@gitlab.com/foodieyamwoonsen/foodie_hugo_media.git"
   },
   "lint-staged": {
-    "*.{png,jpeg,jpg,gif}": [
-      "imagemin-lint-staged"
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "node ./imagemin.js",
+      "git add"
     ]
   },
   "keywords": [],
@@ -25,8 +26,14 @@
   "homepage": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media#readme",
   "devDependencies": {
     "husky": "^4.3.0",
-    "imagemin-lint-staged": "^0.4.0",
-    "lint-staged": "^10.4.0"
+    "lint-staged": "^10.4.0",
+    "imagemin": "^5.3.1",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^5.2.2",
+    "imports-loader": "^0.7.1"
   },
   "husky": {
     "hooks": {
