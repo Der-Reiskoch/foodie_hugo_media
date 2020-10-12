@@ -13,8 +13,7 @@
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif}": [
-      "imagemin-lint-staged",
-      "git add"
+      "imagemin-lint-staged"
     ]
   },
   "keywords": [],
