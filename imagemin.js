@@ -20,9 +20,10 @@ const plugins = [
 ].map(it => require(it[0])(it[1]))
 
 const minifyFile = filename =>
-  new Promise((resolve, reject) =>
+  new Promise((resolve, reject) => {
+    console.log(filename);
     fs.readFile(filename, (err, data) => err ? reject(err) : resolve(data))
-  )
+  })
   .then(originalBuffer => imagemin
     .buffer(originalBuffer, { plugins })
     .then(minimizedBuffer => ({
