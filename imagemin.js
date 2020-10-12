@@ -7,7 +7,7 @@ const plugins = [
     interlaced: true,
   }],
   ['imagemin-jpegoptim', {
-    size: '50%',
+    size: 80,
   }],
   ['imagemin-optipng', {
     optimizationLevel: 5,
