@@ -12,7 +12,10 @@
     "url": "git+ssh://git@gitlab.com/foodieyamwoonsen/foodie_hugo_media.git"
   },
   "lint-staged": {
-    "*.{png,jpeg,jpg,gif}": ["imagemin-lint-staged", "git add"]
+    "*.{png,jpeg,jpg,gif}": [
+      "imagemin-lint-staged",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -22,7 +25,13 @@
   },
   "homepage": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media#readme",
   "devDependencies": {
+    "husky": "^4.3.0",
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^10.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
