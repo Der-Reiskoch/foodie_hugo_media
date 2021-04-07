@@ -4,12 +4,11 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "hugo server -p 9090",
-    "mb:start": "./bin/hugo server -p 9090"
+    "start": "hugo server -p 9090"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/foodieyamwoonsen/foodie_hugo_media.git"
+    "url": "git+ssh://git@github.com:Der-Reiskoch/foodie_hugo_media.git"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
@@ -19,11 +18,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media/issues"
-  },
-  "homepage": "https://gitlab.com/foodieyamwoonsen/foodie_hugo_media#readme",
+  "license": "MIT",
   "devDependencies": {
     "husky": "^4.3.0",
     "imagemin": "^5.3.1",
