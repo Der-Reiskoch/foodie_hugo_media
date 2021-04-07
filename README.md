@@ -5,15 +5,15 @@
 - Install Hugo
 - perform `npm install`
 
-## Image Optimization
-
-Images are optimized for web via lint-staged script
-
 ## Start Locally
 
 ```
 npm run start
 ```
+
+## Image Optimization
+
+Images are optimized for web via lint-staged script
 
 ## Autodeploy
 
