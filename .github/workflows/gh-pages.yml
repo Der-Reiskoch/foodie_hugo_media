@@ -9,11 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -26,3 +26,34 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+      - name: Send notification mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Required mail server address:
+          server_address: smtp.mail.de
+          # Required mail server port:
+          server_port: 465
+          # Optional (recommended): mail server username:
+          username: ${{secrets.MAIL_USERNAME}}
+          # Optional (recommended) mail server password:
+          password: ${{secrets.MAIL_PASSWORD}}
+          # Required mail subject:
+          subject: Foodie Media Auto-Deployment success!
+          # Required recipients' addresses:
+          to: der@reisko.ch
+          # Required sender full name (address can be skipped):
+          from: der@reisko.ch # <der@reisko.ch>
+          # Optional whether this connection use TLS (default is true if server_port is 465)
+          secure: true
+          # Optional plain body:
+          body: Deployment job of ${{github.repository}} completed successfully!
+          # Optional recipient of the email response:
+          reply_to: der@reisko.ch
+          # Optional Message ID this message is replying to:
+          in_reply_to: <der@reisko.ch>
+          # Optional unsigned/invalid certificates allowance:
+          ignore_cert: true
+          # Optional converting Markdown to HTML (set content_type to text/html too):
+          convert_markdown: true
+          # Optional attachments:
+          priority: low
