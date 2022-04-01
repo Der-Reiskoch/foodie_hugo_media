@@ -22,16 +22,16 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
       - name: Push to public repo
-      uses: cpina/github-action-push-to-another-repository@v1.3
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source-directory: 'public'
-        destination-github-username: 'Der-Reiskoch'
-        destination-repository-name: 'foodie_media_public'
-        user-email: der@reisko.ch
-        target-branch: master
-        commit-message: CI Media Deployment
+        uses: cpina/github-action-push-to-another-repository@v1.3
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'public'
+          destination-github-username: 'Der-Reiskoch'
+          destination-repository-name: 'foodie_media_public'
+          user-email: der@reisko.ch
+          target-branch: master
+          commit-message: CI Media Deployment
       - name: Send notification mail
         uses: dawidd6/action-send-mail@v3
         with:
