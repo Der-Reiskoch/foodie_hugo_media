@@ -1,27 +1,20 @@
-name: github pages
-
-on:
-  push:
-    branches:
-      - master # Set a branch to deploy
-
+name: Deploy Media via git-ftp
+on: push
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: git-ftp push
+        uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          submodules: true # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-      - name: Build
-        run: npm install && $(npm bin)/hugo --minify
-      - name: Deploy GH Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-      - name: Send notification mail
+          url: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          options: --remote-root ${{ secrets.FTP_SERVER_DIR }} --verbose
+      - name: send notification mail
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
@@ -33,22 +26,23 @@ jobs:
           # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD}}
           # Required mail subject:
-          subject: Der Reiskoch Media GH Pages Auto-Deployment success!
+          subject: Der Reiskoch Media Auto-Deployment success!
           # Required recipients' addresses:
           to: der@reisko.ch
           # Required sender full name (address can be skipped):
-          from: ci@der.reisko.ch # <der@reisko.ch>
+          from: der@reisko.ch # <der@reisko.ch>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
-          body: Deployment job of ${{github.repository}} completed successfully!
+          body: Build job of ${{github.repository}} completed successfully!
           # Optional recipient of the email response:
-          reply_to: ci@der.reisko.ch
+          reply_to: der@reisko.ch
           # Optional Message ID this message is replying to:
-          in_reply_to: <ci@der.reisko.ch>
+          in_reply_to: <der@reisko.ch>
           # Optional unsigned/invalid certificates allowance:
           ignore_cert: true
           # Optional converting Markdown to HTML (set content_type to text/html too):
           convert_markdown: true
           # Optional attachments:
           priority: low
+

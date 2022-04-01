@@ -1,4 +1,4 @@
-name: github pages
+name: deployment to public
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'public'
+          source-directory: 'public/static'
           destination-github-username: 'Der-Reiskoch'
           destination-repository-name: 'foodie_media_public'
           user-email: der@reisko.ch
@@ -43,15 +43,15 @@ jobs:
           # Required recipients' addresses:
           to: der@reisko.ch
           # Required sender full name (address can be skipped):
-          from: der@reisko.ch # <der@reisko.ch>
+          from: ci@der.reisko.ch # <der@reisko.ch>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
           body: Deployment job of ${{github.repository}} completed successfully!
           # Optional recipient of the email response:
-          reply_to: der@reisko.ch
+          reply_to: ci@der.reisko.ch
           # Optional Message ID this message is replying to:
-          in_reply_to: <der@reisko.ch>
+          in_reply_to: <ci@der.reisko.ch>
           # Optional unsigned/invalid certificates allowance:
           ignore_cert: true
           # Optional converting Markdown to HTML (set content_type to text/html too):
