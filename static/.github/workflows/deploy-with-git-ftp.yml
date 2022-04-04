@@ -34,7 +34,7 @@ jobs:
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
-          body: Build job of ${{github.repository}} completed successfully!
+          body: FTP Upload of ${{github.repository}} completed successfully!
           # Optional recipient of the email response:
           reply_to: der@reisko.ch
           # Optional Message ID this message is replying to:
