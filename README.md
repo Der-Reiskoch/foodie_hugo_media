@@ -15,6 +15,8 @@ npm run start
 
 Images are optimized for web via lint-staged script
 
-## Autodeploy
+## Deployment to webspace
 
-There are autodeploy scripts for both Github and Gitlab to publish the media server on gitlab oder github pages
+This will be deployed to the webspace via git-ftp
+
+[![Deploy via git-ftp](https://github.com/Der-Reiskoch/foodie_public/actions/workflows/deploy-with-git-ftp.yml/badge.svg)](https://github.com/Der-Reiskoch/foodie_public/actions/workflows/deploy-with-git-ftp.yml)
