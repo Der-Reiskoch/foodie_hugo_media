@@ -18,7 +18,7 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
-          server_address: smtp.mail.de
+          server_address: ${{secrets.MAIL_HOST}}
           # Required mail server port:
           server_port: 465
           # Optional (recommended): mail server username:
@@ -30,15 +30,11 @@ jobs:
           # Required recipients' addresses:
           to: der@reisko.ch
           # Required sender full name (address can be skipped):
-          from: der@reisko.ch # <der@reisko.ch>
+         from: Continuous Foodie Integration <ci@der.reisko.ch>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
           body: FTP Upload of ${{github.repository}} completed successfully!
-          # Optional recipient of the email response:
-          reply_to: der@reisko.ch
-          # Optional Message ID this message is replying to:
-          in_reply_to: <der@reisko.ch>
           # Optional unsigned/invalid certificates allowance:
           ignore_cert: true
           # Optional converting Markdown to HTML (set content_type to text/html too):
