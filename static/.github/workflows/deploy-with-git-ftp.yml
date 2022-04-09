@@ -30,7 +30,7 @@ jobs:
           # Required recipients' addresses:
           to: der@reisko.ch
           # Required sender full name (address can be skipped):
-         from: Continuous Foodie Integration <ci@der.reisko.ch>
+          from: Continuous Foodie Integration <ci@der.reisko.ch>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
@@ -41,4 +41,3 @@ jobs:
           convert_markdown: true
           # Optional attachments:
           priority: low
-
