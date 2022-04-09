@@ -1,8 +1,7 @@
-# Foodie Hugo Media Server
+# Foodie Media Server
 
 ## Getting Started
 
-- Install Hugo
 - perform `npm install`
 
 ## Start Locally
