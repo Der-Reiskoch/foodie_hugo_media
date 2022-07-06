@@ -3,8 +3,12 @@ const path = require("path");
 const process = require("process");
 const { exec } = require('child_process')
 
+const args = process.argv.slice(2)
+
+
+
 const BASE_MEDIA_DIR = "./static/media";
-const imageDir = path.join(BASE_MEDIA_DIR, "/1100/1131");
+const imageDir = path.join(BASE_MEDIA_DIR, args[0]);
 
 console.log("create webps in '%s'", imageDir);
 
