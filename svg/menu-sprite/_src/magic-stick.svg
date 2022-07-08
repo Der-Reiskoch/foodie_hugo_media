@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="216" height="220" viewBox="0 0 216 220">
+  <defs>
+    <style>
+      .mst-5{fill:#000;opacity:.25}
+    </style>
+  </defs>
+  <g id="group-124svg">
+    <path d="M211.958 219.054a3.57 3.57 0 0 1-2.561-1.073L83.218 89.687a3.593 3.593 0 0 1 5.122-5.038l126.179 128.296a3.591 3.591 0 0 1-2.561 6.109Z" id="path-1" fill-rule="evenodd" style="fill:#142a3b"/>
+    <path d="m17.22 17.511 51.631 17.498L103.271.014l-5.737 52.494 51.631 29.163-55.942 13.116-12.899 56.876-28.683-52.494L.01 105.002l34.42-34.997-17.21-52.494Z" id="path-2" fill-rule="evenodd" style="fill:#fbb713"/>
+    <path d="m90.461 45.388 7.395 4.177L103.271.014l-8.834 8.98-3.976 36.394Z" id="path-3" class="mst-5" fill-rule="evenodd"/>
+    <path d="M138.182 75.468 86.149 87.666l-11.965 52.761 6.14 11.236 12.899-56.876 55.942-13.116-10.983-6.203Z" id="path-4" class="mst-5" fill-rule="evenodd"/>
+    <path d="M44.567 92.049 8.772 96.094.01 105.002l48.633-5.495-4.076-7.458Z" id="path-5" class="mst-5" fill-rule="evenodd"/>
+  </g>
+</svg>
