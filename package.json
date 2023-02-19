@@ -11,9 +11,15 @@
     "type": "git",
     "url": "git+ssh://git@github.com:Der-Reiskoch/foodie_hugo_media.git"
   },
-  "lint-staged": {
+  "lint-staged-backup": {
     "*.{png,jpeg,jpg,gif,svg}": [
       "node ./imagemin.js",
+      "git add"
+    ]
+  },
+  "lint-staged": {
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "ls -all",
       "git add"
     ]
   },
