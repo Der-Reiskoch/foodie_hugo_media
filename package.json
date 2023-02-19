@@ -19,8 +19,7 @@
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
-      "ls -all",
-      "git add"
+      "ls -all"
     ]
   },
   "keywords": [],
