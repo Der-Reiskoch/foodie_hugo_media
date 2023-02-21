@@ -10,7 +10,7 @@ const minifyFile = (filename) => {
       console.log('minfy',filename);
       // sips -s format jpeg -s formatOptions 55 <biggerFile>.png --out "./<mediumFile>.jpeg"
 
-      // sips -s format jpeg -s formatOptions 75 ./static/media/2000/2024/01_zutaten.jpg  --out "./static/media/2000/2024/01_zutaten.jpeg"
+      // sips -s format jpeg -s formatOptions 75 ./static/media/1200/1224/01_zutaten.jpg  --out "./static/media/1200/1224/01_zutaten.jpeg"
 
       
       resolve(filename);
