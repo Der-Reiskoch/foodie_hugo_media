@@ -26,3 +26,9 @@ For older image folders without webP files you can perform `npm run generateWebP
 
 To be able to do so [cwebp](https://developers.google.com/speed/webp/download) has to be installed
 (For example via Homebrew: `brew install webp`).
+
+## Using Imagekit
+
+- zz3378 = tr:w-600h-450:ot-%20%20Der%20Reiskoch,otc-5a781d80,otbg-bbbbbb50,otf-ubuntu,ott-b,ots-20pt,otia-left,otp-1,otw-600,oy-600
+- bb49ee = tr:w-1200h-900:ot-%20%20Der%20Reiskoch,otc-5a781d80,otbg-bbbbbb50,otf-ubuntu,ott-b,ots-24pt,otia-left,otp-1,otw-1200,oy-1200
+- cx54se = tr:w-1600h-1200:ot-%20%20Der%20Reiskoch,otc-5a781d80,otbg-bbbbbb50,otf-ubuntu,ott-b,ots-26pt,otia-left,otp-1,otw-1600,oy-1600
