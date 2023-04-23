@@ -1,1 +1,1 @@
-console.log('deactivated')
+console.log("THIS IS DEACTIVATED")
