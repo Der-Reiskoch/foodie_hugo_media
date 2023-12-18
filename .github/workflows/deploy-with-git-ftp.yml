@@ -28,9 +28,9 @@ jobs:
           # Required mail subject:
           subject: Der Reiskoch Media Auto-Deployment success!
           # Required recipients' addresses:
-          to: info@der-reiskoch.de
+          to: jens@der-reiskoch.de
           # Required sender full name (address can be skipped):
-          from: Continuous Reisko.ch Integration <ci@der.reisko.ch>
+          from: Continuous Reisko.ch Integration <ci@der-reiskoch.de>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
