@@ -3,7 +3,7 @@
 $id = $_GET['id'];
 $title = $_GET['title'];
 
-$pinUrl = "";
+$pinUrl = null;
 if (isset($id)) {
 
     $path2ndPart = str_pad($id, 4, '0', STR_PAD_LEFT);
@@ -20,15 +20,6 @@ if (isset($id)) {
 
     if ($hasGenricPin) {
         $pinUrl = $genericUrl;
-    }
-    else {
-        $baseUrl = "https://bilder.der-reiskoch.de/pins";
-        $staticUrl = sprintf("%s%s/collage.jpg",$baseUrl, $path);
-        $hasStaticPin = doesRemoteFileExist($staticUrl);
-
-        if ($hasStaticPin) {
-            $pinUrl = $staticUrl;
-        }
     }
 } else {
     print("no id");

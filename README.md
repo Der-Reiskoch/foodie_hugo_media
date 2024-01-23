@@ -1,4 +1,4 @@
-# Foodie Media Server
+# Der Reiskoch Media Server
 
 ## Getting Started
 
