@@ -1,20 +1,18 @@
 <?php
 
-$src = $_GET['src'];
+$srcWithLeadingSlash = $_GET['src'];
 $newWidth = $_GET['width'];
 
 $imageUrl = "";
-if ((!is_null($src)) && (!is_null($newWidth))) {
+if ((!is_null($srcWithLeadingSlash)) && (!is_null($newWidth))) {
 
-    $imageUrl = sprintf("https://ik.imagekit.io/reiskoch02/tr:w-%s%s" ,$newWidth, $src);
+    $imageUrl = sprintf("https://ik.imagekit.io/reiskoch02/tr:w-%s%s" ,$newWidth, $srcWithLeadingSlash);
 
 } else {
     print("no src and width given");
 }
 
-//generateImage($imageUrl);
-
-print $imageUrl;
+generateImage($imageUrl);
 
 function generateImage($url) {
     if (isset($url)) {
