@@ -12,7 +12,10 @@ if ((!is_null($src)) && (!is_null($newWidth))) {
     print("no src and width given");
 }
 
-generateImage($imageUrl);
+//generateImage($imageUrl);
+
+print $imageUrl;
+
 
 function generateImage($url) {
     if (isset($url)) {
