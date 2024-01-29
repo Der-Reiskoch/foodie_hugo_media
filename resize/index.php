@@ -3,7 +3,7 @@
 $src = $_GET['src'];
 $newWidth = $_GET['width'];
 
-$baseURL = "https://bilder.der-reiskoch.de";
+$baseURL = "https://bilder.koch-reis.de/";
 
 if ((!is_null($src)) && (!is_null($newWidth))) {
 
