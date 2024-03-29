@@ -16,7 +16,8 @@ if (isset($id)) {
     $pin = sprintf("%s/pin.jpg", $path);
     // https://ik.imagekit.io/reiskoch02/pins/tr:w-1000,h-1500:%s:%s/%s
     // https://ik.imagekit.io/reiskoch/ext/pins/tr:w-1000,h-1500:%s:%s/%s
-    $genericUrl = sprintf("https://ik.imagekit.io/reiskoch02/pins/tr:w-1000,h-1500:%s:%s/%s" ,$textOverlay, $logoOverlay, $pin);
+    // https://ik.imagekit.io/reiskoch/pins/tr:w-1000,h-1500:%s:%s/%s
+    $genericUrl = sprintf("https://ik.imagekit.io/reiskoch/pins/tr:w-1000,h-1500:%s:%s/%s" ,$textOverlay, $logoOverlay, $pin);
     
     $hasGenricPin = doesRemoteFileExist($genericUrl);
 
