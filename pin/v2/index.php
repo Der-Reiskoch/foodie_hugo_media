@@ -14,7 +14,9 @@ if (isset($id)) {
     $logoOverlay = sprintf("l-image,i-boldtextlogo.png,w-368,h-100,lx-330,ly-1350,t-false,l-end"); 
 
     $pin = sprintf("%s/pin.jpg", $path);
-    $genericUrl = sprintf("https://ik.imagekit.io/reiskoch/ext/pins/tr:w-1000,h-1500:%s:%s/%s" ,$textOverlay, $logoOverlay, $pin);
+    // https://ik.imagekit.io/reiskoch02/pins/tr:w-1000,h-1500:%s:%s/%s
+    // https://ik.imagekit.io/reiskoch/ext/pins/tr:w-1000,h-1500:%s:%s/%s
+    $genericUrl = sprintf("https://ik.imagekit.io/reiskoch02/pins/tr:w-1000,h-1500:%s:%s/%s" ,$textOverlay, $logoOverlay, $pin);
     
     $hasGenricPin = doesRemoteFileExist($genericUrl);
 
