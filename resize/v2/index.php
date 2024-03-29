@@ -6,7 +6,7 @@ $newWidth = $_GET['width'];
 $imageUrl = "";
 if ((!is_null($srcWithLeadingSlash)) && (!is_null($newWidth))) {
 
-    $imageUrl = sprintf("https://ik.imagekit.io/reiskoch02/tr:w-%s%s" ,$newWidth, $srcWithLeadingSlash);
+    $imageUrl = sprintf("https://ik.imagekit.io/reiskoch/tr:w-%s%s" ,$newWidth, $srcWithLeadingSlash);
 
 } else {
     print("no src and width given");

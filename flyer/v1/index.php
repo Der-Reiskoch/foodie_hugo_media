@@ -4,7 +4,7 @@ $id = $_GET['id'];
 
 $imageUrl = "";
 if (isset($id)) {
-    $imageUrl = sprintf("https://ik.imagekit.io/reiskoch02/pins/_calender/tr:w-80,h-115/%s", $id);
+    $imageUrl = sprintf("https://ik.imagekit.io/reiskoch/ext/flyer/tr:w-80,h-115/%s", $id);
 } else {
     print("no id");
 }
