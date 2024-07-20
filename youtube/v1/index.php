@@ -10,7 +10,10 @@ if (!isset($_GET['file'])) {
 $file = $_GET['file'];
 
 
-$url = 'https://bilder.koch-reis.de/media/_youtube/' . $file;
+// $url = 'https://bilder.koch-reis.de/media/_youtube/' . $file;
+
+
+$url = sprintf("https://ik.imagekit.io/reiskoch/tr:w-%s/%s" ,600, $file);
 
 $imageTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
 $headers = get_headers($url, 1);
