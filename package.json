@@ -4,44 +4,16 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "$(npm bin)/http-server -p 9090",
-    "generateWebPs": "node generateWebPs"
+    "start": "npx http-server -p 9090"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:Der-Reiskoch/foodie_hugo_media.git"
   },
-  "lint-staged": {
-    "*.{png,jpeg,jpg,gif,svg}": [
-      "node ./imagemin.js",
-      "git add"
-    ]
-  },
-  "lint-staged-new": {
-    "*.{png,jpeg,jpg,gif,svg}": [
-      "ls -all",
-      "git add"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.0",
-    "husky": "^4.3.0",
-    "imagemin": "^5.3.1",
-    "imagemin-gifsicle": "^5.2.0",
-    "imagemin-jpegoptim": "^7.0.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-pngquant": "^5.0.1",
-    "imagemin-svgo": "^5.2.2",
-    "imports-loader": "^0.7.1",
-    "lint-staged": "^10.4.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "http-server": "^14.1.0"
   }
 }
