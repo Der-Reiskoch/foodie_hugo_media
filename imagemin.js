@@ -1,4 +1,4 @@
-/*"use strict";
+"use strict";
 const fs = require("fs");
 const imagemin = require("imagemin");
 
@@ -57,4 +57,4 @@ Promise.resolve(process.argv)
   .catch((e) => {
     console.error(e);
     process.exit(1);
-  });*/
+  });
