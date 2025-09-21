@@ -57,3 +57,30 @@
 - tab_wan_von_passie.jpg → t/tab_wan_von_passie.jpg
 - tao_hu_pad_thua_nog.jpg → t/tao_hu_pad_thua_nog.jpg
 - thua_phu_pad_mhu.jpg → t/thua_phu_pad_mhu.jpg
+
+## What was done
+
+All image files in `media/_thaiindex/` root directory were moved to alphabetic subfolders based on their first letter. For example:
+- Files starting with 'd' moved to `d/` subfolder
+- Files starting with 'h' moved to `h/` subfolder
+- Files starting with 'k' moved to `k/` subfolder
+- etc.
+
+## What you need to adjust
+
+In your consuming project, update all image path references from:
+```
+media/_thaiindex/filename.jpg
+```
+to:
+```
+media/_thaiindex/{first-letter}/filename.jpg
+```
+
+You can use this helper function:
+```javascript
+function getNewThaiIndexPath(filename) {
+    const firstLetter = filename.charAt(0).toLowerCase();
+    return `media/_thaiindex/${firstLetter}/${filename}`;
+}
+```
