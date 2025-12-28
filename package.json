@@ -3,7 +3,6 @@
   "version": "2.0.1",
   "description": "",
   "scripts": {
-    "claude": "npx @anthropic-ai/claude-code",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx http-server -p 9090"
   },
@@ -16,5 +15,12 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^14.1.0"
+  },
+  "engines": {
+    "node": "20.19.3",
+    "npm": "10.x"
+  },
+  "volta": {
+    "node": "20.19.3"
   }
 }
