@@ -3,3 +3,5 @@ public/
 bin/
 .DS_Store
 yarn-error.log
+docs/agent-todos
+.claude/settings.local.json
