@@ -5,3 +5,4 @@ bin/
 yarn-error.log
 docs/agent-todos
 .claude/settings.local.json
+.agent-todos.local.json
